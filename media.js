@@ -25,7 +25,6 @@ wavesurfer.init({
 
 
 
-//загружаем нужную песню
 wavesurfer.load("sound.mp3");
 
 //play and pause a player
@@ -33,12 +32,10 @@ playPause.addEventListener("click", function (e) {
     wavesurfer.playPause();
 });
 
-//load audio duration on load
 wavesurfer.on("ready", function (e) {
     duration.textContent = timeCalculator(wavesurfer.getDuration());
 });
 
-//get updated current time on play
 wavesurfer.on("audioprocess", function (e) {
     current.textContent = timeCalculator(wavesurfer.getCurrentTime());
 });
