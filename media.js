@@ -55,4 +55,4 @@ wavesurfer.on("pause", function (e) {
 //update current time on seek
 wavesurfer.on("seek", function (e) {
     current.textContent = timeCalculator(wavesurfer.getCurrentTime());
-});-
+});
